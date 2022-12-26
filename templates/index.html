@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Setting the pages character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- The meta viewport will scale my content to any device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to my stylesheet -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <title>Start up</title>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Trade Code</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody id="data-output">
+            <!-- Prodcuts from gavascript file in here. -->
+            {% if my_data %}
+            {% for i in my_data %}
+            <tr>
+                <td>{{i.date}}</td>
+                <td>{{i.trade_code}}</td>
+                <td>{{i.high}}</td>
+                <td>{{i.low}}</td>
+                <td>{{i.open}}</td>
+                <td>{{i.close}}</td>
+                <td>{{i.volume}}</td>
+
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    
+   
+    <!-- Link to the javascript file -->
+</body>
+
+</html>
