@@ -21,6 +21,7 @@
     <table>
         <thead>
             <tr>
+                
                 <th>Date</th>
                 <th>Trade Code</th>
                 <th>High</th>
@@ -28,13 +29,15 @@
                 <th>Open</th>
                 <th>Close</th>
                 <th>Volume</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody id="data-output">
             <!-- Prodcuts from gavascript file in here. -->
-            {% if my_data %}
+           
             {% for i in my_data %}
             <tr>
+               
                 <td>{{i.date}}</td>
                 <td>{{i.trade_code}}</td>
                 <td>{{i.high}}</td>
@@ -42,10 +45,14 @@
                 <td>{{i.open}}</td>
                 <td>{{i.close}}</td>
                 <td>{{i.volume}}</td>
+                <td>  
+                    <a href="/update/{{ i.volume }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+                    <a href="/delete/{{ i.volume }}">Delete</a>  
+                </td>
 
             </tr>
             {% endfor %}
-            {% endif %}
+          
         </tbody>
     </table>
     

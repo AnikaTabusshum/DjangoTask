@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    
+    
+</head>  
+<body>
+    <p>{{my_data2.volume}}</p>  
+<form method="POST" class="post-form" action="/update/{{my_data2.volume}}">  
+        {% csrf_token %}  
+        <div class="container">  
+            <br>  
+                <div class="form-group row">  
+                <label class="col-sm-1 col-form-label"></label>  
+                <div class="col-sm-4">  
+                <h3>Update Details</h3>  
+                </div>  
+              </div>  
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label">date:</label>  
+                <div class="col-sm-4">  
+                    <input type="text" name="eid" id="id_eid"  value="{{my_data2.date}}"/>  
+                </div>  
+              </div>  
+              <div class="form-group row">  
+                <label class="col-sm-2 col-form-label">trade_code</label>  
+                <div class="col-sm-4">  
+                    <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{my_data2.trade_code}}" />  
+                </div>  
+              </div>  
+            </div>  
+            <div class="form-group row">  
+            <label class="col-sm-2 col-form-label">high</label>  
+            <div class="col-sm-4">  
+                <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ my_data2.high }}" />  
+            </div>  
+          </div>  
+        </div>  
+        <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">low</label>  
+        <div class="col-sm-4">  
+            <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ my_data2.low }}" />  
+        </div>  
+      </div>  
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label">open</label>  
+                <div class="col-sm-4">  
+                    <input type="text" name="eemail" id="id_eemail" required maxlength="254" value="{{ my_data2.open}}" />  
+                </div>  
+              </div>  
+                <div class="form-group row">  
+                <label class="col-sm-2 col-form-label">close</label>  
+                <div class="col-sm-4">  
+                    <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ my_data2.close }}" />  
+                </div>  
+              </div>  
+            </div>  
+            <div class="form-group row">  
+            <label class="col-sm-2 col-form-label">volume</label>  
+            <div class="col-sm-4">  
+                <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ my_data2.volume }}" />  
+            </div>  
+          </div>  
+                <div class="form-group row">  
+                <label class="col-sm-1 col-form-label"></label>  
+                <div class="col-sm-4">  
+                <button type="submit" class="btn btn-success">Update</button>  
+                </div>  
+              </div>  
+                </div>  
+</form>  
+</body>  
+</html>  
